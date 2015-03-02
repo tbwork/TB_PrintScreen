@@ -1,0 +1,2 @@
+# TB_PrintScreen
+This software is not for directly use in your development. I finished it in 2011 spring. Now I share it to show all interested friends the best efficient way to build a print-screen software. In 2011, I was a college student and not familiar with design mode or even object-oriented development. But in it, some fantastic functions are implemented. Hope you can get what you want here!
