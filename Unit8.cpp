@@ -1,0 +1,226 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Unit8.h"
+#include "Main.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm8 *Form8;
+bool mousedown;
+bool imagemousedown;
+bool panelmousedown;
+int px,py;
+int x,y;
+int sx,sy;
+ Graphics::TBitmap*back;
+ Graphics::TBitmap*temp;
+//---------------------------------------------------------------------------
+__fastcall TForm8::TForm8(TComponent* Owner)
+        : TForm(Owner)
+{
+  show=new Graphics::TBitmap();
+  back=new Graphics::TBitmap();
+  temp=new Graphics::TBitmap();
+  back->Width=Screen->Width;
+  back->Height=Screen->Height;
+  back->Canvas->Brush->Color=clBlue;
+  back->Canvas->Pen->Color=clBlue;
+  back->Canvas->Rectangle(0,0,Screen->Width,Screen->Height);
+  sx=Panel1->Height;sy=Panel1->Height+5;
+   mousedown=false;
+   imagemousedown=false;
+   panelmousedown=false;
+   temp->Width=Screen->Width;
+   temp->Height=Screen->Height;
+}
+//---------------------------------------------------------------------------
+
+__fastcall TForm8::~TForm8()
+{
+delete temp;
+delete back;
+delete show;
+}
+
+
+
+
+void __fastcall TForm8::FormPaint(TObject *Sender)
+{
+  BitBlt(temp->Canvas->Handle,0,0,Form8->ClientWidth,Form8->ClientHeight,back->Canvas->Handle,0,0,SRCCOPY);
+  BitBlt(temp->Canvas->Handle,sx,sy,show->Width,show->Height,show->Canvas->Handle,0,0,SRCCOPY);
+  BitBlt(Canvas->Handle,0,0,Form8->ClientWidth,Form8->ClientHeight,temp->Canvas->Handle,0,0,SRCCOPY);
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm8::N1Click(TObject *Sender)
+{
+ liuxuan->N1->Click();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm8::N2Click(TObject *Sender)
+{
+liuxuan->Save1->Click();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm8::Exit1Click(TObject *Sender)
+{
+Close();        
+}
+//---------------------------------------------------------------------------
+
+
+
+
+
+void __fastcall TForm8::FormResize(TObject *Sender)
+{
+
+  BitBlt(temp->Canvas->Handle,0,0,Form8->ClientWidth,Form8->ClientHeight,back->Canvas->Handle,0,0,SRCCOPY);
+  BitBlt(temp->Canvas->Handle,sx,sy,show->Width,show->Height,show->Canvas->Handle,0,0,SRCCOPY);
+  BitBlt(Canvas->Handle,0,0,Form8->ClientWidth,Form8->ClientHeight,temp->Canvas->Handle,0,0,SRCCOPY);
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm8::FormShow(TObject *Sender)
+{
+  BitBlt(temp->Canvas->Handle,0,0,Form8->ClientWidth,Form8->ClientHeight,back->Canvas->Handle,0,0,SRCCOPY);
+  BitBlt(temp->Canvas->Handle,sx,sy,show->Width,show->Height,show->Canvas->Handle,0,0,SRCCOPY);
+  BitBlt(Canvas->Handle,0,0,Form8->ClientWidth,Form8->ClientHeight,temp->Canvas->Handle,0,0,SRCCOPY);
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm8::FormMouseDown(TObject *Sender, TMouseButton Button,
+      TShiftState Shift, int X, int Y)
+{
+ if(X>=sx&&X<=(sx+show->Width)&&Y>=sy&&Y<=(sy+show->Height))
+ {
+       mousedown=true;
+  x=X;
+  y=Y;
+  }
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm8::FormMouseMove(TObject *Sender, TShiftState Shift,
+      int X, int Y)
+{
+
+if(mousedown)
+{
+  sx+=(X-x);
+  sy+=(Y-y);
+  x=X;
+  y=Y;
+    BitBlt(temp->Canvas->Handle,0,0,Form8->ClientWidth,Form8->ClientHeight,back->Canvas->Handle,0,0,SRCCOPY);
+  BitBlt(temp->Canvas->Handle,sx,sy,show->Width,show->Height,show->Canvas->Handle,0,0,SRCCOPY);
+  BitBlt(Canvas->Handle,0,0,Form8->ClientWidth,Form8->ClientHeight,temp->Canvas->Handle,0,0,SRCCOPY);
+ /* BitBlt(temp->Canvas->Handle,0,0,Screen->Width,Screen->Height,back->Canvas->Handle,0,0,SRCCOPY);
+  BitBlt(temp->Canvas->Handle,sx,sy,show->Width,show->Height,show->Canvas->Handle,0,0,SRCCOPY);
+  BitBlt(Canvas->Handle,0,0,Screen->Width,Screen->Height,temp->Canvas->Handle,0,0,SRCCOPY);          //Form8->ClientWidth,Form8->ClientHeight
+ */
+ }
+ if(X>=sx&&X<=(sx+show->Width)&&Y>=sy&&Y<=(sy+show->Height))
+ {
+  Form8->Cursor=crHandPoint;
+  Form8->ShowHint=true;
+ }
+ else
+ {
+  Form8->Cursor=crDefault;
+  Form8->ShowHint=false;
+ }
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm8::FormMouseUp(TObject *Sender, TMouseButton Button,
+      TShiftState Shift, int X, int Y)
+{
+     mousedown=false;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm8::FormClose(TObject *Sender, TCloseAction &Action)
+{
+   sx=0;sy=0;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm8::FormKeyUp(TObject *Sender, WORD &Key,
+      TShiftState Shift)
+{
+ if(Key==27)
+ {//ESC
+  Close();
+ }
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TForm8::Image1MouseDown(TObject *Sender,
+      TMouseButton Button, TShiftState Shift, int X, int Y)
+{
+ imagemousedown=true;
+ Form8->Color=Image1->Canvas->Pixels[X][Y];
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm8::Image1MouseUp(TObject *Sender, TMouseButton Button,
+      TShiftState Shift, int X, int Y)
+{
+   imagemousedown=false;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm8::Image1MouseMove(TObject *Sender, TShiftState Shift,
+      int X, int Y)
+{
+  if(imagemousedown)
+  {
+    back->Canvas->Brush->Color=Image1->Canvas->Pixels[X][Y];
+    back->Canvas->Pen->Color=Image1->Canvas->Pixels[X][Y];
+    back->Canvas->Rectangle(0,0,Screen->Width,Screen->Height);
+    BitBlt(temp->Canvas->Handle,0,0,Form8->ClientWidth,Form8->ClientHeight,back->Canvas->Handle,0,0,SRCCOPY);
+    BitBlt(temp->Canvas->Handle,sx,sy,show->Width,show->Height,show->Canvas->Handle,0,0,SRCCOPY);
+    BitBlt(Canvas->Handle,0,0,Form8->ClientWidth,Form8->ClientHeight,temp->Canvas->Handle,0,0,SRCCOPY);
+
+  }
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm8::Panel1MouseDown(TObject *Sender,
+      TMouseButton Button, TShiftState Shift, int X, int Y)
+{
+ panelmousedown=true;
+ px=X;
+ py=Y;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm8::Panel1MouseMove(TObject *Sender, TShiftState Shift,
+      int X, int Y)
+{
+  if(panelmousedown)
+  {
+     Panel1->Left+=(X-px);
+     Panel1->Top+=(Y-py);
+  }
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TForm8::Panel1MouseUp(TObject *Sender, TMouseButton Button,
+      TShiftState Shift, int X, int Y)
+{
+    panelmousedown=false;
+}
+//---------------------------------------------------------------------------
+
+

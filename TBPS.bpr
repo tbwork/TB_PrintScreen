@@ -1,0 +1,188 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="TBPS.exe"/>
+    <OBJFILES value="TBPS.obj Unit7.obj Unit8.obj Unit9.obj Main.obj Unit3.obj Unit1.obj 
+      Unit4.obj Unit5.obj Unit6.obj Unit10.obj"/>
+    <RESFILES value="TBPS.res uac.res"/>
+    <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES) Unit7.dfm Unit8.dfm Unit9.dfm Main.dfm Unit3.dfm Unit1.dfm 
+      Unit4.dfm Unit5.dfm Unit6.dfm Unit10.dfm"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value="dbrtl.lib vcldb.lib TntLibR.lib bcbsmp.lib vclx.lib PNGDelphiC6.lib 
+      CrnGifImage.lib rtl.lib vcl.lib"/>
+    <SPARELIBS value="vcl.lib rtl.lib CrnGifImage.lib PNGDelphiC6.lib vclx.lib bcbsmp.lib 
+      TntLibR.lib vcldb.lib dbrtl.lib"/>
+    <PACKAGES value="vcl.bpi rtl.bpi dbrtl.bpi adortl.bpi vcldb.bpi vclx.bpi bdertl.bpi 
+      vcldbx.bpi ibxpress.bpi dsnap.bpi cds.bpi bdecds.bpi qrpt.bpi teeui.bpi 
+      teedb.bpi tee.bpi dss.bpi teeqr.bpi visualclx.bpi visualdbclx.bpi 
+      dsnapcrba.bpi dsnapcon.bpi bcbsmp.bpi vclie.bpi xmlrtl.bpi inet.bpi 
+      inetdbbde.bpi inetdbxpress.bpi inetdb.bpi nmfast.bpi webdsnap.bpi 
+      bcbie.bpi websnap.bpi soaprtl.bpi dclocx.bpi dbexpress.bpi dbxcds.bpi 
+      bcb2kaxserver.bpi"/>
+    <PATHCPP value=".;"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value="NO_WIN32_LEAN_AND_MEAN"/>
+    <SYSDEFINES value="NO_STRICT"/>
+    <MAINSOURCE value="TBPS.cpp"/>
+    <INCLUDEPATH value="L:\图片\程序;&quot;D:\Program Files\JAM Software\ShellBrowser Components\TNT\CBuilder&quot;;&quot;D:\Program Files\JAM Software\ShellBrowser Components\BCB6\lib&quot;;..\待删文档\NEW双Canvas测试;$(BCB)\include;$(BCB)\include\vcl;&quot;C:\Program Files\Borland\PNGFORBCB6&quot;;D:\WINDDK\2600\inc\ddk\wxp;D:\WINDDK\2600\inc\ddk\wdm\wxp;D:\WINDDK\2600\inc\wxp;D:\WINDDK\2600\inc\crt\gl;D:\WINDDK\2600\inc\crt\sys;&quot;C:\Program Files\Borland\GifForBC6&quot;"/>
+    <LIBPATH value="L:\图片\程序;$(BCB)\Projects\Bpl;&quot;D:\Program Files\JAM Software\ShellBrowser Components\TNT\CBuilder&quot;;&quot;D:\Program Files\JAM Software\ShellBrowser Components\BCB6\lib&quot;;..\待删文档\NEW双Canvas测试;$(BCB)\Projects\Lib;&quot;C:\Program Files\Borland\CBuilder6\Projects&quot;;&quot;C:\Documents and Settings\Administrator\桌面\待删文档\双Canvas测试&quot;;$(BCB)\lib\obj;$(BCB)\lib;D:\WINDDK\2600\lib\wxp\i386;&quot;C:\Program Files\Borland\CBuilder6\C6&quot;"/>
+    <WARNINGS value="-w-par"/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <IDLCFLAGS value="-IL:\图片\程序 
+      -I&quot;D:\Program Files\JAM Software\ShellBrowser Components\TNT\CBuilder&quot; 
+      -I&quot;D:\Program Files\JAM Software\ShellBrowser Components\BCB6\lib&quot; 
+      -I..\待删文档\NEW双Canvas测试 -I$(BCB)\include -I$(BCB)\include\vcl 
+      -I&quot;C:\Program Files\Borland\PNGFORBCB6&quot; -ID:\WINDDK\2600\inc\ddk\wxp 
+      -ID:\WINDDK\2600\inc\ddk\wdm\wxp -ID:\WINDDK\2600\inc\wxp 
+      -ID:\WINDDK\2600\inc\crt\gl -ID:\WINDDK\2600\inc\crt\sys 
+      -I&quot;C:\Program Files\Borland\GifForBC6&quot; -src_suffix cpp 
+      -DNO_WIN32_LEAN_AND_MEAN -boa"/>
+    <CFLAG1 value="-O2 -H=$(BCB)\lib\vcl60.csm -Hc -Vx -Ve -X- -a8 -b- -k- -vi -c -tW -tWM"/>
+    <PFLAGS value="-$Y- -$L- -$D- -$C- -$A8 -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zn"/>
+    <LFLAGS value="-D&quot;&quot; -aa -Tpe -x -Gn"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0w32.obj sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mt.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="TBPS.res" FORMNAME="" UNITNAME="TBPS.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TBPS.cpp" FORMNAME="" UNITNAME="TBPS" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit7.cpp" FORMNAME="Form7" UNITNAME="Unit7" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit8.cpp" FORMNAME="Form8" UNITNAME="Unit8" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="uac.res" FORMNAME="" UNITNAME="uac.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit9.cpp" FORMNAME="Form9" UNITNAME="Unit9" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Main.cpp" FORMNAME="liuxuan" UNITNAME="Main" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit3.cpp" FORMNAME="Form3" UNITNAME="Unit3" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit1.cpp" FORMNAME="Form1" UNITNAME="Unit1" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit4.cpp" FORMNAME="Form4" UNITNAME="Unit4" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit5.cpp" FORMNAME="Form5" UNITNAME="Unit5" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit6.cpp" FORMNAME="TBNote" UNITNAME="Unit6" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Unit10.cpp" FORMNAME="Form10" UNITNAME="Unit10" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=1
+AutoIncBuild=1
+MajorVer=1
+MinorVer=0
+Release=0
+Build=3
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=2052
+CodePage=936
+
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=1.0.0.3
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=截屏软件 by 木头 TBWood
+ProductVersion=1.0.0.0
+Comments=作者：汤波 网名：木头 TBWood
+
+[Excluded Packages]
+C:\PROGRA~1\Borland\CBUILD~1\Projects\Bpl\unidac60.bpl=Universal Data Access Components
+
+[HistoryLists\hlIncludePath]
+Count=17
+Item0=L:\图片\程序;D:\Program Files\JAM Software\ShellBrowser Components\TNT\CBuilder;D:\Program Files\JAM Software\ShellBrowser Components\BCB6\lib;..\待删文档\NEW双Canvas测试;$(BCB)\include;$(BCB)\include\vcl;C:\Program Files\Borland\PNGFORBCB6;D:\WINDDK\2600\inc\ddk\wxp;D:\WINDDK\2600\inc\ddk\wdm\wxp;D:\WINDDK\2600\inc\wxp;D:\WINDDK\2600\inc\crt\gl;D:\WINDDK\2600\inc\crt\sys;C:\Program Files\Borland\GifForBC6
+Item1=D:\Program Files\JAM Software\ShellBrowser Components\TNT\CBuilder;D:\Program Files\JAM Software\ShellBrowser Components\BCB6\lib;..\待删文档\NEW双Canvas测试;$(BCB)\include;$(BCB)\include\vcl;C:\Program Files\Borland\PNGFORBCB6;D:\WINDDK\2600\inc\ddk\wxp;D:\WINDDK\2600\inc\ddk\wdm\wxp;D:\WINDDK\2600\inc\wxp;D:\WINDDK\2600\inc\crt\gl;D:\WINDDK\2600\inc\crt\sys;C:\Program Files\Borland\GifForBC6
+Item2=..\待删文档\NEW双Canvas测试;$(BCB)\include;$(BCB)\include\vcl;C:\Program Files\Borland\PNGFORBCB6;D:\WINDDK\2600\inc\ddk\wxp;D:\WINDDK\2600\inc\ddk\wdm\wxp;D:\WINDDK\2600\inc\wxp;D:\WINDDK\2600\inc\crt\gl;D:\WINDDK\2600\inc\crt\sys;C:\Program Files\Borland\GifForBC6
+Item3=..\待删文档\NEW双Canvas测试;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;C:\Program Files\Borland\PNGFORBCB6;D:\WINDDK\2600\inc\ddk\wxp;D:\WINDDK\2600\inc\ddk\wdm\wxp;D:\WINDDK\2600\inc\wxp;D:\WINDDK\2600\inc\crt\gl;D:\WINDDK\2600\inc\crt\sys;C:\Program Files\Borland\GifForBC6
+Item4=..\待删文档\NEW双Canvas测试;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;C:\Program Files\Borland\PNGFORBCB6;D:\WINDDK\2600\inc\ddk\wxp;D:\WINDDK\2600\inc\ddk\wdm\wxp;D:\WINDDK\2600\inc\wxp;D:\WINDDK\2600\inc\crt\gl;D:\WINDDK\2600\inc\crt\sys
+Item5=..\待删文档\NEW双Canvas测试;C:\Program Files\Borland\CBuilder6\Projects;C:\Documents and Settings\Administrator\桌面\待删文档\双Canvas测试;$(BCB)\include;C:\Program Files\Borland\CBuilder6\C6;$(BCB)\include\vcl;C:\Program Files\Borland\884809179TGifImage.v2.2.Full.Source.BCB.836077;C:\Program Files\Borland\PNGFORBCB6;D:\WINDDK\2600\inc\ddk\wxp;D:\WINDDK\2600\inc\ddk\wdm\wxp;D:\WINDDK\2600\inc\wxp;D:\WINDDK\2600\inc\crt\gl;D:\WINDDK\2600\inc\crt\sys
+Item6=C:\Program Files\Borland\CBuilder6\Projects;C:\Documents and Settings\Administrator\桌面\待删文档\双Canvas测试;$(BCB)\include;C:\Program Files\Borland\CBuilder6\C6;$(BCB)\include\vcl;C:\Program Files\Borland\884809179TGifImage.v2.2.Full.Source.BCB.836077;C:\Program Files\Borland\PNGFORBCB6;D:\WINDDK\2600\inc\ddk\wxp;D:\WINDDK\2600\inc\ddk\wdm\wxp;D:\WINDDK\2600\inc\wxp;D:\WINDDK\2600\inc\crt\gl;D:\WINDDK\2600\inc\crt\sys
+Item7=C:\Program Files\Borland\CBuilder6\Projects;C:\Documents and Settings\Administrator\桌面\待删文档\双Canvas测试;$(BCB)\include;C:\Program Files\Borland\CBuilder6\C6;$(BCB)\include\vcl;C:\Program Files\Borland\884809179TGifImage.v2.2.Full.Source.BCB.836077;D:\WINDDK\2600\inc\ddk\wxp;D:\WINDDK\2600\inc\ddk\wdm\wxp;D:\WINDDK\2600\inc\wxp;D:\WINDDK\2600\inc\crt\gl;D:\WINDDK\2600\inc\crt\sys
+Item8=C:\Program Files\Borland\CBuilder6\Projects;C:\Documents and Settings\Administrator\桌面\待删文档\双Canvas测试;$(BCB)\include;C:\Program Files\Borland\CBuilder6\C6;$(BCB)\include\vcl;D:\WINDDK\2600\inc\ddk\wxp;D:\WINDDK\2600\inc\ddk\wdm\wxp;D:\WINDDK\2600\inc\wxp;D:\WINDDK\2600\inc\crt\gl;D:\WINDDK\2600\inc\crt\sys
+Item9=$(BCB)\include;C:\Program Files\Borland\CBuilder6\C6;$(BCB)\include\vcl;D:\WINDDK\2600\inc\ddk\wxp;D:\WINDDK\2600\inc\ddk\wdm\wxp;D:\WINDDK\2600\inc\wxp;D:\WINDDK\2600\inc\crt\gl;D:\WINDDK\2600\inc\crt\sys
+Item10=$(BCB)\include;C:\Program Files\Borland\CBuilder6\C6;$(BCB)\include\vcl;D:\WINDDK\2600\inc\ddk\wxp;D:\WINDDK\2600\inc\ddk\wdm\wxp;D:\WINDDK\2600\inc\wxp;D:\WINDDK\2600\inc\crt;D:\WINDDK\2600\inc\crt\gl;D:\WINDDK\2600\inc\crt\sys
+Item11=$(BCB)\include;$(BCB)\include\vcl;D:\WINDDK\2600\inc\ddk\wxp;D:\WINDDK\2600\inc\ddk\wdm\wxp;D:\WINDDK\2600\inc\wxp;C:\Program Files\Borland\CBuilder6\C6;D:\WINDDK\2600\inc\crt;D:\WINDDK\2600\inc\crt\gl;D:\WINDDK\2600\inc\crt\sys
+Item12=$(BCB)\include;$(BCB)\include\vcl;D:\WINDDK\2600\inc\ddk\wxp;D:\WINDDK\2600\inc\ddk\wdm\wxp;D:\WINDDK\2600\inc\wxp;C:\Program Files\Borland\CBuilder6\C6;D:\WINDDK\2600\inc\crt;D:\WINDDK\2600\inc\ddk\wxp;D:\WINDDK\2600\inc\ddk\wdm\wxp;D:\WINDDK\2600\inc\wxp;D:\WINDDK\2600\inc\ddk\wdm\wxp;D:\WINDDK\2600\inc\crt\gl;D:\WINDDK\2600\inc\crt\sys
+Item13=$(BCB)\include;$(BCB)\include\vcl;D:\WINDDK\2600\inc\ddk\wxp;D:\WINDDK\2600\inc\ddk\wdm\wxp;D:\WINDDK\2600\inc\wxp;C:\Program Files\Borland\CBuilder6\C6
+Item14=$(BCB)\include;$(BCB)\include\vcl;D:\WINDDK\2600\inc\ddk\wxp;D:\WINDDK\2600\inc\ddk\wdm\wxp;D:\WINDDK\2600\inc\wxp
+Item15=$(BCB)\include;$(BCB)\include\vcl;D:\WINDDK\2600\inc\ddk\wxp;D:\WINDDK\2600\inc\ddk\wdm\wxp;D:\WINDDK\2600\inc\wxp;
+Item16=$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=8
+Item0=L:\图片\程序;$(BCB)\Projects\Bpl;D:\Program Files\JAM Software\ShellBrowser Components\TNT\CBuilder;D:\Program Files\JAM Software\ShellBrowser Components\BCB6\lib;..\待删文档\NEW双Canvas测试;$(BCB)\Projects\Lib;C:\Program Files\Borland\CBuilder6\Projects;C:\Documents and Settings\Administrator\桌面\待删文档\双Canvas测试;$(BCB)\lib\obj;$(BCB)\lib;D:\WINDDK\2600\lib\wxp\i386;C:\Program Files\Borland\CBuilder6\C6
+Item1=$(BCB)\Projects\Bpl;D:\Program Files\JAM Software\ShellBrowser Components\TNT\CBuilder;D:\Program Files\JAM Software\ShellBrowser Components\BCB6\lib;..\待删文档\NEW双Canvas测试;$(BCB)\Projects\Lib;C:\Program Files\Borland\CBuilder6\Projects;C:\Documents and Settings\Administrator\桌面\待删文档\双Canvas测试;$(BCB)\lib\obj;$(BCB)\lib;D:\WINDDK\2600\lib\wxp\i386;C:\Program Files\Borland\CBuilder6\C6
+Item2=..\待删文档\NEW双Canvas测试;$(BCB)\Projects\Lib;C:\Program Files\Borland\CBuilder6\Projects;C:\Documents and Settings\Administrator\桌面\待删文档\双Canvas测试;$(BCB)\lib\obj;$(BCB)\lib;D:\WINDDK\2600\lib\wxp\i386;C:\Program Files\Borland\CBuilder6\C6
+Item3=$(BCB)\Projects\Lib;C:\Program Files\Borland\CBuilder6\Projects;C:\Documents and Settings\Administrator\桌面\待删文档\双Canvas测试;$(BCB)\lib\obj;$(BCB)\lib;D:\WINDDK\2600\lib\wxp\i386;C:\Program Files\Borland\CBuilder6\C6
+Item4=C:\Program Files\Borland\CBuilder6\Projects;C:\Documents and Settings\Administrator\桌面\待删文档\双Canvas测试;$(BCB)\lib\obj;$(BCB)\lib;D:\WINDDK\2600\lib\wxp\i386;C:\Program Files\Borland\CBuilder6\C6
+Item5=$(BCB)\lib\obj;$(BCB)\lib;D:\WINDDK\2600\lib\wxp\i386;C:\Program Files\Borland\CBuilder6\C6
+Item6=$(BCB)\lib\obj;$(BCB)\lib;D:\WINDDK\2600\lib\wxp\i386
+Item7=$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=6
+Item0=NO_WIN32_LEAN_AND_MEAN
+Item1=STRICT;NO_WIN32_LEAN_AND_MEAN
+Item2=_DEBUG;STRICT;NO_WIN32_LEAN_AND_MEAN;
+Item3=STRICT;NO_WIN32_LEAN_AND_MEAN;_DEBUG
+Item4=_DEBUG;STRICT
+Item5=_DEBUG
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+
+[CORBA]
+AddServerUnit=1
+AddClientUnit=1
+PrecompiledHeaders=1
+
+[Language]
+ActiveLang=
+ProjectLang=
+RootDir=
+  </IDEOPTIONS>
+</PROJECT>
