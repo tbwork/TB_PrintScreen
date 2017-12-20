@@ -1,8 +1,3 @@
-# Introduction
-
-This software is not for directly use in your development. I finished it in 2011 spring. It demonstrates one possible efficient way to build a print-screen software.
-Due to that I was a newbie in terms of design mode in 2011, so the codes are not so friendly in reading. You can mainly focus on the Main.cpp file in which many useful methods, routines are implemented. Hope you can get what you want here!
-
 # What is it?
 
 This software is used to print screen efficiently which was finished it in 2011 spring. In that time, I was confident to say this print screen artifact is one of the most efficient. Only QQ's print screen can be on a par with it. Even today (2015,1), the print-screen module of Alibaba's AliWangWang is too low efficient to compare with it.
